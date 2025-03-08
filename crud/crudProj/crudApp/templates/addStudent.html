@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Add Student</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 40%;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .small-container {
+            width: 100%;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="small-container">
+            <a href="/"><button>Home</button></a>
+            <h3>ADD STUDENT</h3>
+            <form action="/addStudent/" method="post" id="form">
+                {% csrf_token %}
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" required>
+                
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" required>
+                
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" required>
+                
+                <label for="course">Course</label>
+                <input type="text" name="course" id="course" required>
+                
+                <label for="enrollmentDate">Enrollment Date</label>
+                <input type="date" name="enrollmentDate" id="enrollmentDate" required>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

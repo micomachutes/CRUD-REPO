@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    width: 40%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Small Container */
+.small-container {
+    width: 100%;
+}
+
+/* Header */
+h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+/* Form Inputs */
+input[type="text"], input[type="email"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Home Button */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #218838;
+}

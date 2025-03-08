@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+      
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="small-container">
+            <a href="/">Home</a>
+            <h3>UPDATE STUDENT</h3>
+            <form action="updateStudent/" method="post" id="form">
+                {% csrf_token %}
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" value="{{student.firstName}}" required><br>
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" value="{{student.lastName}}" required><br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="{{student.email}}" required><br>
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" value="{{student.dateOfBirth|date:'Y-m-d'}}" required><br>
+                <label for="course">Course</label>
+                <input type="text" name="course" id="course" value="{{student.course}}" required><br>
+                <label for="enrollmentDate">Enrollment Date</label>
+                <input type="date" name="enrollmentDate" id="enrollmentDate" value="{{student.enrollmentDate|date:'Y-m-d'}}"
+                    required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
